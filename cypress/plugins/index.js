@@ -12,8 +12,15 @@
 // the project's config changing)
 
 const cucumber = require('cypress-cucumber-preprocessor').default
+// const browserify = require("@cypress/browserify-preprocessor");
 
 module.exports = (on, config) => {
+  // const options = {
+  //   browserifyOptions: {
+  //       extensions: [".js", ".ts"]
+  //   }
+  // };
+  // on("file:preprocessor", browserify(options));
   on('file:preprocessor', cucumber())
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
